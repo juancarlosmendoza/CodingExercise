@@ -1,0 +1,136 @@
+{
+  "Publicacion": [
+    {
+      "id": 1,
+      "Titulo": "Publication 01",
+      "Descripcion": "Publication 1",
+      "Fecha": "2019/08/03",
+      "Autor": {
+        "Nombre": "Juan ",
+        "Apellido": "Valle",
+        "Correo": "valle@test"
+      }
+    },
+    {
+      "id": 2,
+      "Titulo": "Publication 02",
+      "Descripcion": "publication 2",
+      "Fecha": "2019/08/01",
+      "Autor": {
+        "Nombre": "Nallely",
+        "Apellido": "Guerrero",
+        "Correo": "guerrero@test"
+      }
+    },
+    {
+      "id": 3,
+      "Titulo": "publication 03",
+      "Descripcion": "publication 3",
+      "Fecha": "2019/07/26",
+      "Autor": {
+        "Nombre": "Jose",
+        "Apellido": "Hernandez",
+        "Correo": "hernandez@test"
+      }
+    },
+    {
+      "id": 4,
+      "Titulo": "Publication 04 ",
+      "Descripcion": "publication 4",
+      "Fecha": "2016/01/16",
+      "Autor": {
+        "Nombre": "Cesar",
+        "Apellido": "Gonzalez",
+        "Correo": "gonzalez@test"
+      }
+    },
+    {
+      "id": 5,
+      "Titulo": "publication 05",
+      "Descripcion": "publication 5 ",
+      "Fecha": "2019/08/04",
+      "Autor": {
+        "Nombre": "Citlalli",
+        "Apellido": "Mendoza",
+        "Correo": "mendoza@test"
+      }
+    },
+    {
+      "id": 6,
+      "Titulo": "Publication 06",
+      "Descripcion": "Publication 6 ",
+      "Fecha": "2019/08/01",
+      "Autor": {
+        "Nombre": "Jorge",
+        "Apellido": "Guerrero",
+        "Correo": "guerrero@test"
+      }
+    },
+    {
+      "id": 7,
+      "Titulo": "Publication 07",
+      "Descripcion": "publication 7",
+      "Fecha": "2019/06/13",
+      "Autor": {
+        "Nombre": "Ariel",
+        "Apellido": "Martinez",
+        "Correo": "martinez@test"
+      }
+    },
+    {
+      "id": 8,
+      "Titulo": "Publication 08",
+      "Descripcion": "Publication 8",
+      "Fecha": "2019/08/31",
+      "Autor": {
+        "Nombre": "Angelica",
+        "Apellido": "Flores",
+        "Correo": "flores@test"
+      }
+    },
+    {
+      "id": 9,
+      "Titulo": "Publication 09",
+      "Descripcion": "Publication 9 ",
+      "Fecha": "2020/04/17",
+      "Autor": {
+        "Nombre": "Zuleima",
+        "Apellido": "Alvarado",
+        "Correo": "alvarado@test"
+      }
+    },
+    {
+      "id": 10,
+      "Titulo": "Publication 10",
+      "Descripcion": "publication 10 ",
+      "Fecha": "2019/08/28",
+      "Autor": {
+        "Nombre": "Maria",
+        "Apellido": "Dias",
+        "Correo": "dias@test"
+      }
+    },
+    {
+      "id": 11,
+      "Titulo": "Publication 11",
+      "Descripcion": "publication 11",
+      "Fecha": "2019/09/17",
+      "Autor": {
+        "Nombre": "Gerardo",
+        "Apellido": "Amador",
+        "Correo": "amador@test"
+      }
+    },
+    {
+      "id": 12,
+      "Titulo": "Publication 12",
+      "Descripcion": "Publication 12",
+      "Fecha": "2020/07/09",
+      "Autor": {
+        "Nombre": "Paola",
+        "Apellido": "zamora",
+        "Correo": "zamora@test"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<h1>Dashboard Publication</h1>
+<article>
+<dx-data-grid [dataSource]="listPublication"
+[showColumnLines]="true"
+[showRowLines]="true"
+[showBorders]="true"
+(onRowInserting)="onRowInserting($event)"
+(onRowUpdating)="onRowUpdating($event)"
+(onRowRemoving)="onRowRemoving($event)">
+<dxo-paging [pageSize]="10"></dxo-paging>
+
+<dxo-editing
+         mode="row"
+         [allowUpdating]="true"
+         [allowDeleting]="true"
+         [allowAdding]="true">
+    </dxo-editing>
+
+  <dxi-column dataField="Fecha" dataType="date"><dxi-validation-rule type="required"></dxi-validation-rule></dxi-column>
+  <dxi-column dataField="Titulo"><dxi-validation-rule type="required"></dxi-validation-rule></dxi-column>
+  <dxi-column dataField="Descripcion"><dxi-validation-rule type="required"></dxi-validation-rule></dxi-column>
+  <dxi-column dataField="Autor.Nombre" caption="Nombre Autor"><dxi-validation-rule type="required"></dxi-validation-rule></dxi-column>
+  <dxi-column dataField="Autor.Apellido" caption="Apellido Autor"><dxi-validation-rule type="required"></dxi-validation-rule></dxi-column>
+  <dxi-column dataField="Autor.Correo" caption="Correo"><dxi-validation-rule type="required"></dxi-validation-rule></dxi-column>
+</dx-data-grid>
+</article>
