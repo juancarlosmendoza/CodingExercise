@@ -6,9 +6,10 @@ This project was generated with [CLI angular], [json-server], [DevExtrem]
 
 In a terminal run 'json-server --watch publication.json', to initialize the test server
 
+
 ## Build Application
 
-In a terminal, run `ng serve -o` to build the application and open a browser to the project home page.
+In a new terminal, run 'npm install' to create the dependencies once finished, then run the 'ng serve -o' command to compile the application and open a browser to the project home page.
 
 ## Testing execution
 
