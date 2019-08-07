@@ -1,0 +1,16 @@
+<div class="container">
+<br><br>
+  <dx-button text="Regresar" type="default" [routerLink]="['']"></dx-button><br>
+
+  <h1>Publication Detail</h1>
+
+<article>
+<br>
+  <p><b>Author : </b> {{ autor }} </p>
+  <p><b>last name : </b> {{ apellido }} </p>
+  <p><b>Title Publication : </b> {{ titulo }} </p>
+  <p><b>Descripcion : </b> {{descripcion }} </p>
+  <p><b>Fecha Publication : </b> {{ fecha | date:"dd/MMM/yyyy" }} </p>
+  <p><b>Email : </b> {{ correo }} </p>
+</article>
+</div>

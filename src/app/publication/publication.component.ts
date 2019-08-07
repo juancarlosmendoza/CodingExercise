@@ -3,6 +3,7 @@ import { PublicationService } from '../service/publication.service';
 import { Publication } from '../model/publication';
 import { Autor } from '../model/autor';
 import notify from 'devextreme/ui/notify';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-publication',
@@ -13,11 +14,36 @@ export class PublicationComponent implements OnInit {
   listPublication: Publication[] = [];
   id: number;
 
+  listMenu: Publication[] = [];
+  text = 'Close Drawer';
+  isOpened = true;
+
+  toolbarContent = [{
+    widget: 'dxButton',
+    location: 'before',
+    options: {
+        icon: 'menu',
+        onClick: () => this.clickHandler()
+    }
+  }, {
+    location: 'center',
+    locateInMenu: 'never',
+    template: () => {
+        return '<div class=\'toolbar-label\'><b>Dashboard Publication</b></div>';
+    }
+  }];
+
   constructor(
-    private publicationService: PublicationService
+    // private publicationService: PublicationService,
+    private publicationService: PublicationService,
+    private router: Router
   ) { }
 
   ngOnInit() {
+    this.publicationService.getPublication().subscribe(
+      result => {
+        this.listMenu = result;
+      });
 
     this.publicationService.getPublication()
     .subscribe(
@@ -40,9 +66,11 @@ export class PublicationComponent implements OnInit {
     publication.Descripcion = info.data.Descripcion;
     publication.Fecha = info.data.Fecha;
     publication.Autor = new Autor();
+    publication.Autor.idAutor = publication.id;
     publication.Autor.Nombre = info.data.Autor.Nombre;
     publication.Autor.Apellido = info.data.Autor.Apellido;
     publication.Autor.Correo = info.data.Autor.Correo;
+    publication.Autor.Url = info.data.Autor.Nombre;
     this.publicationService.postPublicacion(publication).subscribe(
       result => {
         notify('Inserting Success', 'success', 3000);
@@ -60,6 +88,7 @@ export class PublicationComponent implements OnInit {
     publication.Fecha = info.newData.Fecha ? info.newData.Fecha : info.oldData.Fecha;
     if (info.newData.Autor) {
     publication.Autor = new Autor();
+    publication.Autor.idAutor = publication.id;
     publication.Autor.Nombre = info.newData.Autor.Nombre ? info.newData.Autor.Nombre : info.oldData.Autor.Nombre;
     publication.Autor.Apellido = info.newData.Autor.Apellido ? info.newData.Autor.Apellido : info.oldData.Autor.Apellido;
     publication.Autor.Correo = info.newData.Autor.Correo ? info.newData.Autor.Correo : info.oldData.Autor.Correo;
@@ -70,7 +99,7 @@ export class PublicationComponent implements OnInit {
     );
   } else {
     publication.Autor = new Autor();
-
+    publication.Autor.idAutor = publication.id;
     publication.Autor.Nombre = info.oldData.Autor.Nombre;
     publication.Autor.Apellido = info.oldData.Autor.Apellido;
     publication.Autor.Correo = info.oldData.Autor.Correo;
@@ -89,6 +118,17 @@ export class PublicationComponent implements OnInit {
         notify('Delete Success', 'success', 3000);
       });
 
+  }
+
+  selectItem( info ) {
+    console.log('info', info.itemData.Autor.idAutor);
+    this.router.navigate(['Autor', info.itemData.Autor.idAutor]);
+
+  }
+
+  clickHandler() {
+    this.text = this.isOpened ? 'Open Drawer' : 'Close Drawer';
+    this.isOpened = !this.isOpened;
   }
 
 }

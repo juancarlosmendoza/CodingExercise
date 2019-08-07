@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { PublicationService } from './service/publication.service';
+import { Publication } from './model/publication';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CodingExcercise';
+
+    constructor() {}
+
+
 }

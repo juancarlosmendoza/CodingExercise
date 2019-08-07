@@ -18,8 +18,8 @@ export class PublicationService {
     return this.http.get<Publication[]>(this.url);
   }
 
-  getPublicationById(id: number) {
-    return this.http.get(this.url + id);
+  getPublicationById(id: number): Observable<Publication> {
+    return this.http.get<Publication>(this.url + '/' + id);
   }
 
   postPublicacion(publication: Publication): Observable<Publication> {

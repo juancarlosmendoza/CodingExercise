@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+article {
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 1px;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  white-space: normal !important;
+  font-size: small;
+}
