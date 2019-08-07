@@ -1,27 +1,35 @@
 # CodingExcercise
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+This project was generated with [CLI angular], [json-server], [DevExtrem]
 
-## Development server
+## Development Server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In a terminal run 'json-server --watch publication.json', to initialize the test server
 
-## Code scaffolding
+## Build Application
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In a terminal, run `ng serve -o` to build the application and open a browser to the project home page.
 
-## Build
+## Testing execution
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The main screen will show a table with information on the publications sorted by date.
 
-## Running unit tests
+## Ordering
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You can sort the information with any value of the table, whether ascending or descending, just click on the header of the column you want to order.
 
-## Running end-to-end tests
+## Insert
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+If you want to add a new publication, press the '+' button on the upper right side, enter all the values ??in the table and press 'save' or press enter.
 
-## Further help
+## Modify
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you want to edit a field you must press 'edit' at the end of the row you wish to modify, change the value in the column to be modified and press 'save' or press enter
+
+## Remove
+
+If you wish to delete a record, press 'delete' at the end of the row you wish to remove, and confirm by pressing 'yes'
+
+## Author Detail
+
+On the left side you will find a menu with the name of the authors, press the author you want to see the detail of the publications by author
