@@ -26,7 +26,6 @@ export class DetailAutorComponent implements OnInit {
   ngOnInit() {
 
        this.idAutor =  this.route.snapshot.params.idAutor;
-       console.log('el autor es : ', this.idAutor);
 
        this.publicationService.getPublicationById(this.idAutor).subscribe(
          result => {
@@ -37,11 +36,8 @@ export class DetailAutorComponent implements OnInit {
            this.fecha = result.Fecha;
            this.descripcion = result.Descripcion;
            this.titulo = result.Titulo;
+          });
 
-                  }
-       );
-
-
-  }
+        }
 
 }

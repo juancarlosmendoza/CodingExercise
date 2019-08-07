@@ -34,7 +34,6 @@ export class PublicationComponent implements OnInit {
   }];
 
   constructor(
-    // private publicationService: PublicationService,
     private publicationService: PublicationService,
     private router: Router
   ) { }
@@ -50,7 +49,6 @@ export class PublicationComponent implements OnInit {
       result => {
 
         this.listPublication = result;
-        console.log('list publication : ', this.listPublication);
         this.id = result.length;
 
 
@@ -79,7 +77,6 @@ export class PublicationComponent implements OnInit {
   }
 
   onRowUpdating(info) {
-    console.log('info', info);
     const publication = new Publication();
 
     publication.id = info.newData.id ? info.newData.id : info.oldData.id;
@@ -121,7 +118,6 @@ export class PublicationComponent implements OnInit {
   }
 
   selectItem( info ) {
-    console.log('info', info.itemData.Autor.idAutor);
     this.router.navigate(['Autor', info.itemData.Autor.idAutor]);
 
   }
